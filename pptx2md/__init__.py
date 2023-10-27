@@ -1,5 +1,3 @@
-import collections
-import collections.abc
 import os
 from typing import Union
 
@@ -43,9 +41,8 @@ def convert(
     wiki: bool = False,  # generate output as wikitext(TiddlyWiki)
     mdk: bool = False,  # generate output as madoko markdown
     min_block_size: int = 15,  # the minimum character number of a text block to be converted
-    page: Union[int, None] = None # only convert the specified page 
+    page: Union[int, None] = None,  # only convert the specified page
 ):
-
     file_path = pptx_path
     g.file_prefix = "".join(os.path.basename(file_path).split(".")[:-1])
 
